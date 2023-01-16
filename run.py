@@ -16,7 +16,7 @@ Taking one parameter "item" and adds the item to the list of items in the Basket
 `self` ketword referes to specific Basket object.
 `append` method of list to add parameter "item" to list stored in `items` attribute of the object.
 """
-    def add_item(self, item, quantity):
+def add_item(self, item, quantity):
         self.items[item] = quantity
 
 
@@ -25,7 +25,7 @@ This function "remove_item" takes a parameter "item". Checks if given "item" is 
 If "item" is present, it is removed bu using the "del" statement. 
 If "item" is not found it prints the message "Item {item} not found".
 """
-    def remove_item(self, item):
+def remove_item(self, item):
         if item in self.items:
             del self.items[item]
         else:
@@ -37,7 +37,7 @@ It iterates over the items in the basket and thier quantities.  With each iterat
 the name and the quantity of the item. If the "items" list is empty, 
 it prints a message saying that the basket is empty.
 """
-    def view_basket(self):
+def view_basket(self):
         if self.items:
             for item, quantity in self.items.items():
                 print(f"{item}: {quantity}")
@@ -53,7 +53,7 @@ For each iteration it calculates cost of that item by multiplying the quantity o
 Keeps adding cost to a variable "total_cost". Then prints item name, quantity and cost. Prints total cost
 by printing the value of the "total_cost" variable.
 """
-    def checkout(self):
+def checkout(self):
         total_cost = 0
         for item, quantity in self.items.items():
             cost = self.prices[item] * quantity
