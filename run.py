@@ -76,3 +76,23 @@ if confirm == "yes":
     return total_cost
 else:
     print("Purchase cancelled.")
+
+
+"""
+Create list of items user can add to basket for purchase
+trousers": 55.50, "t-shirt": 25.50, "bandanna": 12.50
+"""
+
+basket = Basket()
+
+basket.add_item("trousers", 55.50)
+basket.add_item("t-shirt", 25.50)
+basket.add_item("bandanna", 12.50)
+
+basket.view_basket()
+
+basket.remove_item("t-shirt")
+
+basket.view_basket()
+
+total_coat = basket.checkout()
